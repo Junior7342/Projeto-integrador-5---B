@@ -1,13 +1,15 @@
 from flask import Flask, render_template, redirect, url_for, request, flash
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, login_user, logout_user, current_user, login_required
+from flask_migrate import Migrate
 from werkzeug.security import generate_password_hash, check_password_hash
 from config import Config
-from models import db, User, Disk, Exchange
+from models import db, User, Disk, Exchange, init_db
 
 app = Flask(__name__)
 app.config.from_object(Config)
 db.init_app(app)
+migrate = Migrate(app, db)
 
 login_manager = LoginManager(app)
 login_manager.login_view = 'login'
@@ -29,7 +31,7 @@ def register():
         user = User(username=username, email=email, password_hash=generate_password_hash(password))
         db.session.add(user)
         db.session.commit()
-        flash('Registration successful. Please log in.')
+        flash('Cadastro realizado com sucesso. Por favor, faça o login.')
         return redirect(url_for('login'))
     return render_template('register.html')
 
@@ -42,7 +44,7 @@ def login():
         if user and check_password_hash(user.password_hash, password):
             login_user(user)
             return redirect(url_for('index'))
-        flash('Invalid username or password')
+        flash('Usuário ou senha inválidos')
     return render_template('login.html')
 
 @app.route('/logout')
@@ -61,7 +63,7 @@ def add_disk():
         disk = Disk(title=title, artist=artist, year=year, owner_id=current_user.id)
         db.session.add(disk)
         db.session.commit()
-        flash('Disk added successfully.')
+        flash('Disco adicionado com sucesso.')
         return redirect(url_for('index'))
     return render_template('add_disk.html')
 
@@ -77,11 +79,21 @@ def exchange_disks():
             exchange = Exchange(disk_id=to_disk.id, from_user_id=current_user.id, to_user_id=to_disk.owner_id, status='pending')
             db.session.add(exchange)
             db.session.commit()
-            flash('Exchange request sent.')
+            flash('Pedido de troca enviado.')
             return redirect(url_for('index'))
-        flash('Invalid exchange request.')
+        flash('Pedido de troca inválido.')
     disks = Disk.query.filter(Disk.owner_id != current_user.id).all()
     return render_template('exchange_disks.html', disks=disks)
 
+@app.route('/search_disks', methods=['GET', 'POST'])
+def search_disks():
+    disks = []
+    if request.method == 'POST':
+        search_term = request.form['search_term']
+        disks = Disk.query.filter((Disk.title.ilike(f'%{search_term}%')) | (Disk.artist.ilike(f'%{search_term}%'))).all()
+    return render_template('search_disks.html', disks=disks)
+
 if __name__ == '__main__':
+    with app.app_context():
+        init_db()
     app.run(debug=True)

@@ -1,0 +1,15 @@
+{% extends "index.html" %}
+{% block content %}
+<h2>Procurar Discos</h2>
+<form method="post">
+    <label for="search_term">Termo de Busca:</label>
+    <input type="text" id="search_term" name="search_term" required>
+    <button type="submit">Buscar</button>
+</form>
+<h3>Resultados da Busca</h3>
+<ul>
+    {% for disk in disks %}
+        <li>ID: {{ disk.id }}, Título: {{ disk.title }}, Artista: {{ disk.artist }}, Ano: {{ disk.year }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
