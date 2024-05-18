@@ -1,5 +1,9 @@
 # Projeto-integrador-5-B
 
+Devem ser instaladas as seguintes bibliotecas:
+~~~
+pip install flask flask_sqlalchemy flask_migrate flask_login mysql-connector-python
+~~~
 
 Para criar o banco de dados realizar os seguintes comandos no terminal:
 ~~~
