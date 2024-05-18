@@ -1,5 +1,17 @@
-{% extends "index.html" %}
-{% block content %}
-<h2>Exchange Disks</h2>
-<form method="post">
-    <label for="from_disk_id">Your Disk ID:</labelPara finalizar o arquivo `exchange_disks.html` e todo o projeto, siga os passos abaixo:
+   {% extends "index.html" %}
+   {% block content %}
+   <h2>Exchange Disks</h2>
+   <form method="post">
+       <label for="from_disk_id">Your Disk ID:</label>
+       <input type="number" id="from_disk_id" name="from_disk_id" required>
+       <label for="to_disk_id">Disk ID to Exchange:</label>
+       <input type="number" id="to_disk_id" name="to_disk_id" required>
+       <button type="submit">Request Exchange</button>
+   </form>
+   <h3>Available Disks</h3>
+   <ul>
+       {% for disk in disks %}
+           <li>ID: {{ disk.id }}, Title: {{ disk.title }}, Artist: {{ disk.artist }}, Year: {{ disk.year }}</li>
+       {% endfor %}
+   </ul>
+   {% endblock %}
