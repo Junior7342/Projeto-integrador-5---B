@@ -7,7 +7,7 @@
 }
 
 
-#img-fundo{
+.img-fundo{
     width: 100%;
     height: 100vh;
 }
@@ -27,12 +27,12 @@
     gap: 1rem;    
 }
 
-#logo{
+.logo{
     width: 9rem;
     height: 30vh;
 }
 
-#login-sign{
+.login-sign{
     border-radius: 10px;
     width: 15rem;
     height: 4vh;
@@ -66,7 +66,7 @@
     gap: 1.5rem; 
 }
 
-#nome, #email, #senha{
+.nome, .email, .senha{
     height: 5vh;
     width: 45vh;
     border: none;
@@ -77,7 +77,7 @@
 
 
 
-#botao-finalizar
+.botao-finalizar
 {
     width: 5rem;
     height: 7vh;
@@ -89,24 +89,24 @@
     transition: transform 1s ease, background-color 0.3s ease;
 }
 
-#botao-finalizar
+.botao-finalizar
 :hover{
     /* transform: translateY(-0.5rem); */
     background-color: rgba(151, 92, 16, 0.521); 
 }
 
-/* #botao-finalizar
+/* .botao-finalizar
 {
     transform: translateY(0);
 } */
 
-#botao-finalizar
+.botao-finalizar
 :disabled{
     background-color: gray;
     cursor: not-allowed;
 }
 
-#cadastro{
+.cadastro{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -115,7 +115,7 @@
     border-radius: 10px;
 }
 
-#img-vetor-vinil{
+.img-vetor-vinil{
     width: 2rem;
 
 }
@@ -132,7 +132,7 @@ a{
         background-color: rgba(252, 143, 0, 0.323);
     }
 
-    #login-sign{
+    .login-sign{
         width: 20rem;
         background-color: rgba(250, 250, 250, 0.540);
         font-size: 2.5rem;      
@@ -156,29 +156,29 @@ a{
      
     }
 
-    #nome, #email, #senha{
+    .nome, .email, .senha{
         width: 27rem;
         font-size: 1.1rem;
     }
 
-    #botao-finalizar
+    .botao-finalizar
     {
         width: 7rem;
         font-size: 1.5rem;
     }
 
-    #cadastro{
+    .cadastro{
         font-size: 1.2rem;
     }
     
     
-    #img-fundo{
+    .img-fundo{
             width: 50%;
             height: 90vh;
             border-radius: 10px;
     }
 
-    #img-vetor-vinil{
+    .img-vetor-vinil{
         display: none;
     }
 }
