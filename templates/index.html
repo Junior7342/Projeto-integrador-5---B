@@ -7,18 +7,21 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Troca de Discos</h1>
-    <nav>
+    <nav class="index-nav">
+        <div id="logo-header">
+            <img id="logo-vetor" src="{{ url_for('static', filename='assets/logo-aba.png') }}" alt="">
+            <img id="logo-nome" src="{{ url_for('static', filename='assets/logo-nome.png') }}" alt="">
+        </div>
         <a href="{{ url_for('index') }}">Início</a>
         {% if current_user.is_authenticated %}
-            <a href="{{ url_for('logout') }}">Sair</a>
-            <a href="{{ url_for('add_disk') }}">Adicionar Disco</a>
-            <a href="{{ url_for('exchange_disks') }}">Trocar Discos</a>
+            <a id="index-a" href="{{ url_for('logout') }}">Sair</a>
+            <a id="index-a" href="{{ url_for('add_disk') }}">Adicionar Disco</a>
+            <a id="index-a" href="{{ url_for('exchange_disks') }}">Trocar Discos</a>
         {% else %}
-            <a href="{{ url_for('login') }}">Login</a>
-            <a href="{{ url_for('register') }}">Registrar</a>
+            <a id="index-a" href="{{ url_for('login') }}">Login</a>
+            <a id="index-a" href="{{ url_for('register') }}">Registrar</a>
         {% endif %}
-        <a href="{{ url_for('search_disks') }}">Procurar Discos</a>
+        <a id="index-a" href="{{ url_for('search_disks') }}">Procurar Discos</a>
     </nav>
     {% with messages = get_flashed_messages() %}
         {% if messages %}

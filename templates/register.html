@@ -1,13 +1,38 @@
 {% extends "index.html" %}
 {% block content %}
-<h2>Registrar</h2>
-<form method="post">
-    <label for="username">Nome de Usuário:</label>
-    <input type="text" id="username" name="username" required>
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
-    <label for="password">Senha:</label>
-    <input type="password" id="password" name="password" required>
-    <button type="submit">Registrar</button>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/assets/logo-aba.png" type="image/png">
+    <link rel="stylesheet" href="/static/register.css">
+    <title>Cadê Meu Vinil</title>
+</head>
+<body>
+    <div class="register-div">
+        <nav class="register-nav">
+            <div>
+                <img id="logo" src="{{ url_for('static', filename='assets/logo.png') }}" alt="logo-do-cade-meu-disco-2024">
+            </div>
+            <p id="login-sign">Cadastro</p>
+            <div class="container-form">
+                <form class="formulario" onsubmit="return login_ok()">
+                    <input id="nome" type="text" placeholder=" Nome" required>
+                    <input id="email" type="email" placeholder=" Email" required>
+                    <input id="senha" type="password" placeholder=" Crie sua senha" required>
+                    <a href="/html/bem-vindo.html"><button id="botao-finalizar" type="submit">Finalizar</button></a>
+                </form>
+                <div id="cadastro">
+                    <p>Já tem uma conta?</p>
+                    <p>Faça o seu <a href="{{ url_for('login') }}">Login</a></p>
+                </div>
+            </div>
+            <img id="img-vetor-vinil" src="{{ url_for('static', filename='assets/vetor-vinil-preto.png') }}" alt="logo-vinil-preto">
+        </nav>
+        <img id="img-fundo" src="{{ url_for('static', filename='assets/tela-inicial.jpg') }}" alt="imagem-de-um-vinil-sendo-posto-para-tocar">
+        <script src="/scripts/index.js"></script>
+    </div>
+</body>
+</html>
 {% endblock %}

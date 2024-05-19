@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.add-disk-body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container{
+    background-color: rgba(151, 92, 16, 0.521); 
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 70vh;
+    border-radius: 10px;
+}
+
+.info-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    gap: 1rem;
+}
+
+h1{
+    margin-bottom: 3rem;
+}
+
+.add-disk-form{
+    background-color:rgba(250, 250, 250, 0.579);background-color:rgba(250, 250, 250, 0.579);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+
+}
+
+#titulo, #artista, #ano{
+    height: 5vh;
+    width: 45vh;
+    border: none;
+    border-bottom: 2px solid black;
+    border-radius: 3px;
+    background-color: rgba(151, 92, 16, 0);
+}
