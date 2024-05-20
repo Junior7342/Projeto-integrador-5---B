@@ -23,6 +23,9 @@ python app.py
 ~~~
 Por último, acessar o site http://127.0.0.1:5000/ (esse link vai aparecer no próprio terminal do Visual Studio). Pronto! O aplicativo está rodando!
 
+## Rodando o aplicativo
+Por ser um MVP (Minimum Viable Product, ou Produto Mínimo Viável), o aplicativo ainda possui funcionalidades limitadas. Para utilizá-lo, seguir as instruções contidas no tutorial em vídeo disponível neste repositório
+
 ## Membros do grupo
 * Cintia Mascari Martim - Idealização de conceito, planejamento e protótipo do frontend
 * Helvio Rosa Pinto - Elaboração dos documentos com as jornadas dos usuários
