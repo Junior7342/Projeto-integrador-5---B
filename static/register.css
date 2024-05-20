@@ -66,7 +66,7 @@
     gap: 1.5rem; 
 }
 
-.nome, .email, .senha{
+.formulario input{
     height: 5vh;
     width: 45vh;
     border: none;
@@ -75,10 +75,13 @@
     background-color: rgba(151, 92, 16, 0);
 }
 
+.formulario div{
+    display: flex;
+}
 
 
-.botao-finalizar
-{
+
+.formulario button{
     width: 5rem;
     height: 7vh;
     font-weight: 900;
@@ -89,16 +92,9 @@
     transition: transform 1s ease, background-color 0.3s ease;
 }
 
-.botao-finalizar
-:hover{
-    /* transform: translateY(-0.5rem); */
+.formulario button:hover{
     background-color: rgba(151, 92, 16, 0.521); 
 }
-
-/* .botao-finalizar
-{
-    transform: translateY(0);
-} */
 
 .botao-finalizar
 :disabled{
@@ -156,14 +152,13 @@ a{
      
     }
 
-    .nome, .email, .senha{
+    .formulario input{
         width: 27rem;
         font-size: 1.1rem;
     }
 
-    .botao-finalizar
-    {
-        width: 7rem;
+    .formulario button{
+        width: 8rem;
         font-size: 1.5rem;
     }
 

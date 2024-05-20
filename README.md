@@ -45,11 +45,11 @@ Na versão atual ocorreram as seguintes evoluções no sistema:
 * Integração do frontend com o backend. Agora o app possui interface web, rodando um servidor em Flask
 
 ## Descrição do projeto
-Aplicativo Cadê Meu Disco?
+Aplicativo Cadê Meu Vinil?
 
 Olá novo usuário!
 
-O aplicativo Cadê Meu Disco? tem como objetivo conectar diversos usuários interessados em compartilhar seus discos através de troca, compra e venda numa plataforma segura e interativa. A versão atual é um MVP (Minimum Viable Product, ou Produto Mínimo Viável), que oferece as seguintes funcionalidades:
+O aplicativo Cadê Meu Vinil? tem como objetivo conectar diversos usuários interessados em compartilhar seus discos através de troca, compra e venda numa plataforma segura e interativa. A versão atual é um MVP (Minimum Viable Product, ou Produto Mínimo Viável), que oferece as seguintes funcionalidades:
 1. Registrar novo usuário
 2. Realizar login de usuário
 3. Realizar logout de usuário

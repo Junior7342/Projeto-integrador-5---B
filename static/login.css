@@ -64,6 +64,10 @@
  
 }
 
+.formulario div{
+    display: flex;
+}
+
 #username, #password{
     height: 5vh;
     width: 15rem;
@@ -75,7 +79,7 @@
 
 
 
-#botao-entrar{
+.formulario button{
     width: 5rem;
     height: 6vh;
     font-weight: 900;
@@ -86,7 +90,7 @@
     transition: transform 1s ease, background-color 0.3s ease;
 }
 
-#botao-entrar:hover{
+.formulario button:hover{
 
     background-color: rgba(151, 92, 16, 0.521); 
 }
@@ -147,7 +151,7 @@ a{
         font-size: 1.1rem;
     }
 
-    #botao-entrar{
+   .formulario button{
         width: 7rem;
         font-size: 1.5rem;
     }

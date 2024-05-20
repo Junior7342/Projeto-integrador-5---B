@@ -5,7 +5,7 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.add-disk-body{
+.exchange-disk-body{
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -15,11 +15,9 @@
 .container{
     background-color: rgba(151, 92, 16, 0.521); 
     display: flex;
-    align-items: center;
-    justify-content: center;
     margin-top: 2rem;
     width: 50rem;
-    height: 70vh;
+    height: 75vh;
     border-radius: 10px;
 }
 
@@ -33,17 +31,8 @@
     gap: 1rem;
 }
 
-h1{
+h2{
     margin-bottom: 3rem;
-}
-
-.add-disk-form{
-    background-color:rgba(250, 250, 250, 0.579);
-    height: 100%;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .form-container{
@@ -61,6 +50,7 @@ h1{
 }
 
 .form-container button{
+    background-color: rgba(151, 92, 16, 0.521); 
     margin-top: 2rem;
     width: 100%;
     height: 7vh;
@@ -74,4 +64,25 @@ h1{
 
 .form-container button:hover{
     background-color: rgba(151, 92, 16, 0.521); 
+}
+
+.disponiveis{
+    background-color:rgba(250, 250, 250, 0.579);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    border-radius: 10px;
+}
+
+h1{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul{
+    width: 90%;
+    background-color:rgba(250, 250, 250, 0.886);
+    border-radius: 10px;
 }

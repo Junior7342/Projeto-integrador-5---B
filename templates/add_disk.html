@@ -1,6 +1,6 @@
-<div class="add-disk-body">
     {% extends "index.html" %}
     {% block content %}
+<div class="add-disk-body">
     <title>Adicionar Disco</title>
     <link rel="stylesheet" href="/static/add_disk.css">
         <div class="container">
@@ -12,11 +12,11 @@
             <div class="add-disk-form">
                 <form class="form-container" method="post">
                     <label for="title">Título:</label>
-                    <input id="titulo" type="text" id="title" name="title" required>
+                    <input type="text" id="title" name="title" required>
                     <label for="artist">Artista:</label>
-                    <input id="artista" type="text" id="artist" name="artist" required>
+                    <input type="text" id="artist" name="artist" required>
                     <label for="year">Ano:</label>
-                    <input id="ano" type="number" id="year" name="year" required>
+                    <input type="number" id="year" name="year" required>
                     <button type="submit">Adicionar Disco</button>
                 </form>
             </div>
