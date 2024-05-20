@@ -1,13 +1,41 @@
 {% extends "index.html" %}
 {% block content %}
-<h2>Registrar</h2>
-<form method="post">
-    <label for="username">Nome de Usuário:</label>
-    <input type="text" id="username" name="username" required>
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
-    <label for="password">Senha:</label>
-    <input type="password" id="password" name="password" required>
-    <button type="submit">Registrar</button>
-</form>
+    <link rel="stylesheet" href="/static/register.css">
+    <title>Cadê Meu Vinil</title>
+</head>
+<body>
+    <div class="register-div">
+        <nav class="register-nav">
+            <div>
+                <img class="logo" src="{{ url_for('static', filename='assets/logo.png') }}" alt="logo-do-cade-meu-disco-2024">
+            </div>
+            <p class="login-sign">Cadastro</p>
+            <div class="container-form">
+                <form class="formulario" method="post">
+                    <div>
+                        <label for="username">Nome:</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div>
+                        <label for="password">Senha:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <button type="submit">Registrar</button>
+                </form>
+                <div class="cadastro">
+                    <p>Já tem uma conta?</p>
+                    <p>Faça o seu <a href="{{ url_for('login') }}">Login</a></p>
+                </div>
+            </div>
+            <img class="img-vetor-vinil" src="{{ url_for('static', filename='assets/vetor-vinil-preto.png') }}" alt="logo-vinil-preto">
+        </nav>
+        <img class="img-fundo" src="{{ url_for('static', filename='assets/tela-inicial.jpg') }}" alt="imagem-de-um-vinil-sendo-posto-para-tocar">
+    </div>
+</body>
+</html>
 {% endblock %}
+

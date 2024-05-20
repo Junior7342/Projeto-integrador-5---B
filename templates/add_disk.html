@@ -1,13 +1,25 @@
-{% extends "index.html" %}
-{% block content %}
-<h2>Adicionar Disco</h2>
-<form method="post">
-    <label for="title">Título:</label>
-    <input type="text" id="title" name="title" required>
-    <label for="artist">Artista:</label>
-    <input type="text" id="artist" name="artist" required>
-    <label for="year">Ano:</label>
-    <input type="number" id="year" name="year" required>
-    <button type="submit">Adicionar Disco</button>
-</form>
-{% endblock %}
+    {% extends "index.html" %}
+    {% block content %}
+<div class="add-disk-body">
+    <title>Adicionar Disco</title>
+    <link rel="stylesheet" href="/static/add_disk.css">
+        <div class="container">
+            <div class="info-container">
+                <h1>Adicionar Disco</h1>
+                <p>Aqui você pode adicionar os seus discos!</p>
+                <p>faça todo o procedimento e realize a adição.</p>
+            </div>
+            <div class="add-disk-form">
+                <form class="form-container" method="post">
+                    <label for="title">Título:</label>
+                    <input type="text" id="title" name="title" required>
+                    <label for="artist">Artista:</label>
+                    <input type="text" id="artist" name="artist" required>
+                    <label for="year">Ano:</label>
+                    <input type="number" id="year" name="year" required>
+                    <button type="submit">Adicionar Disco</button>
+                </form>
+            </div>
+        </div>
+    {% endblock %}
+</div>
