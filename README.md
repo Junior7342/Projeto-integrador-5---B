@@ -30,6 +30,9 @@ Por último, acessar o site http://127.0.0.1:5000/ (esse link vai aparecer no pr
 * Tiago Anselmo Pereira - Protótipo inicial do backend em Python
 * Vinicius Jose Matias Marques - Preparação do frontend, com estilização em HTML/CSS
 
+## Protótipo no Figma
+https://www.figma.com/design/cOfYcr5hKxTSPKVYmlp1Um/Untitled?node-id=57-31&t=ZBbKyywfsEQNnplg-0
+
 ## Revisão do projeto apresentado e definição da prova de conceito
 Este projeto é uma nova versão do projeto apresentado na disciplina Projeto Integrador 5 - parte 1. Na disciplina anterior foi desenvolvido um protótipo de backend em Python, faltando ajustes quanto à validação dos dados inseridos e tratamento de erros e exceções. Em virtude das dificuldades de tempo e pela redução de um membro na equipe, não havia sido possível finalizar o app em Flask e nem o backend em Python. Assim, o script em Python exibia uma interface de usuário simples, utilizando o próprio terminal da IDE, apenas para validar a inclusão dos dados na jornada do usuário. O banco de dados seria em PostgreSQL. O repositório de dados associado à prova de conceito do projeto utilizou dicionários em Python, estrutura de dados suficiente para validação daquela ideia inicial.
 
